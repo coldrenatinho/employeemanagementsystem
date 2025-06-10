@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:latest
+    container_name: employeemaneger_database_mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: mystrongpassword
+      MYSQL_DATABASE: ems
+      MYSQL_USER: springadmin
+      MYSQL_PASSWORD: mystrongpassword
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+
+volumes:
+  db_data:
