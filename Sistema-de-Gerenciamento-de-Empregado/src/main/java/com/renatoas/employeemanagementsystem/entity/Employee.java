@@ -19,7 +19,7 @@ public class Employee {
     private Long id;
 
     @Column(name = "firs_name")
-    private String firsName;
+    private String firstName;
 
     @Column(name = "last_name")
     private String lastName;
