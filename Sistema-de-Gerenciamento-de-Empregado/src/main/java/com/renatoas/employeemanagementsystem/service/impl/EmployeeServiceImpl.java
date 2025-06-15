@@ -4,9 +4,34 @@ package com.renatoas.employeemanagementsystem.service.impl;
 // Esta classe geralmente contém a lógica de negócio relacionada a funcionários,
 // como criar, buscar, atualizar e deletar registros.
 // Observação: Normalmente, ela implementa a interface EmployeeService e utiliza o repositório para acessar o banco de dados.
-// Aqui, a classe está vazia, mas em um projeto real, ela teria métodos que manipulam EmployeeDto e Employee.
 
-public class EmployeeServiceImpl {
+import com.renatoas.employeemanagementsystem.dto.EmployeeDto;
+import com.renatoas.employeemanagementsystem.entity.Employee;
+import com.renatoas.employeemanagementsystem.mapper.EmployeeMapper;
+import com.renatoas.employeemanagementsystem.repository.EmployeeRepository;
+import com.renatoas.employeemanagementsystem.service.EmployeeService;
+import lombok.AllArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+// Esta classe é anotada com @Service para que o Spring a reconheça como um bean de serviço.
+@Service
+@AllArgsConstructor
+public class EmployeeServiceImpl implements EmployeeService {
+
+    @Autowired
+   private EmployeeRepository employeeRepository;
+
+
+    // Implementação do método createEmployee da interface EmployeeService.
+    @Override
+    public EmployeeDto createEmployee(EmployeeDto employeeDto) {
+
+        Employee employee = EmployeeMapper.mapToEmployee(employeeDto);
+        Employee savedEmployee = employeeRepository.save(employee);
+        return EmployeeMapper.mapToEmployeeDto(savedEmployee);
+    }
+
     // Métodos de negócio seriam implementados aqui, por exemplo:
     // - createEmployee
     // - getEmployeeById
