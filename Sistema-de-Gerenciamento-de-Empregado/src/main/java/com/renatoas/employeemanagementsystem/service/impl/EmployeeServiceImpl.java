@@ -14,6 +14,8 @@ import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Collections;
+
 // Esta classe é anotada com @Service para que o Spring a reconheça como um bean de serviço.
 @Service
 @AllArgsConstructor
@@ -30,6 +32,13 @@ public class EmployeeServiceImpl implements EmployeeService {
         Employee employee = EmployeeMapper.mapToEmployee(employeeDto);
         Employee savedEmployee = employeeRepository.save(employee);
         return EmployeeMapper.mapToEmployeeDto(savedEmployee);
+    }
+
+    @Override
+    public EmployeeDto getEmployeeById(Long employeeId) {
+        Employee employee = employeeRepository.findById(employeeId)
+            .orElseThrow(() -> new RuntimeException("Funcionário não encontrado com id: " + employeeId));
+        return EmployeeMapper.mapToEmployeeDto(employee);
     }
 
     // Métodos de negócio seriam implementados aqui, por exemplo:
