@@ -17,6 +17,7 @@ public class EmployeeMapper {
 
         return new EmployeeDto(
                 employee.getId(),
+                //TODO - Implementar o método toString() na classe Employee para retornar uma representação legível do objeto.
                 employee.getFirstName(),
                 employee.getLastName(),
                 employee.getEmail()
@@ -26,6 +27,7 @@ public class EmployeeMapper {
     // Converts an EmployeeDto to an Employee entity.
     public static Employee mapToEmployee (EmployeeDto employeeDto) {
 
+        //TODO - Implementar a validação dos dados do EmployeeDto antes de criar o Employee.
         return new Employee(
                 employeeDto.getId(),
                 employeeDto.getFirstName(),
