@@ -6,10 +6,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/v1/employees")
@@ -28,5 +25,13 @@ public class EmployeeController {
         //Verificar
         return new ResponseEntity<>(savedEmployee, HttpStatus.CREATED);
     }
+
+    //@PathVariable é usado para extrair valores de variáveis de caminho na URL.
+    @GetMapping("/{employeeId}")
+    public ResponseEntity<EmployeeDto> getEmployeeById(@PathVariable Long employeeId) {
+        EmployeeDto employeeDto = employeeService.getEmployeeById(employeeId);
+        return new ResponseEntity<>(employeeDto, HttpStatus.OK);
+    }
+
 
 }
