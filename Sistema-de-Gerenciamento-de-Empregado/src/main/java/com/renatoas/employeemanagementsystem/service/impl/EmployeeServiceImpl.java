@@ -64,6 +64,32 @@ public class EmployeeServiceImpl implements EmployeeService {
                 .collect(Collectors.toUnmodifiableList());
     }
 
+    //Recebe o ID do funcionário a ser atualizado e um EmployeeDto com os novos dados.
+    // Um Objeto DTO (Data Transfer Object) é usado para transferir dados entre as camadas da aplicação.
+    @Override
+    public EmployeeDto updateEmployee(Long employeeId, EmployeeDto updatedEmployeeDto) {
+
+        // Instancia um objeto Employee usando o EmployeeMapper, que converte o EmployeeDto em um Employee
+        Employee updateEmployee = employeeRepository.findById(employeeId).orElseThrow(
+                ()  -> new ResourceNotFoundException("Funcionário não encontrado com id: " + employeeId)
+
+        );
+
+        // Atualiza os campos do funcionário com os dados do EmployeeDto
+       updateEmployee.setFirstName(updatedEmployeeDto.getFirstName());
+       updateEmployee.setLastName(updatedEmployeeDto.getLastName());
+       updateEmployee.setEmail(updatedEmployeeDto.getEmail());
+
+
+        // Salva o funcionário atualizado no repositório e retorna o EmployeeDto correspondente
+        // O método save() do repositório salva o objeto Employee atualizado no banco de dados.
+        // O método retorna um EmployeeDto, que é uma representação do funcionário atualizado.
+        Employee updateEmployeeObj = employeeRepository.save(updateEmployee);
+
+        return EmployeeMapper.mapToEmployeeDto(updateEmployeeObj);
+
+    }
+
 
 
 

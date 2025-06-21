@@ -41,4 +41,16 @@ public class EmployeeController {
         List<EmployeeDto> employees = employeeService.getAllEmployees();
         return ResponseEntity.ok(employees);
     }
+
+    @PutMapping("{id}")                               //Define um endpoint
+    public ResponseEntity<EmployeeDto> updateEmployee(@PathVariable("id") Long employeeId,
+                                                      //Cria um endpoint para atualizar um funcionário
+                                                      @RequestBody EmployeeDto updatedEmployeeDto)
+
+    {
+        EmployeeDto updatedEmployee = employeeService.updateEmployee(employeeId, updatedEmployeeDto);
+        return  ResponseEntity.ok(updatedEmployee);
+    }
+
+
 }
