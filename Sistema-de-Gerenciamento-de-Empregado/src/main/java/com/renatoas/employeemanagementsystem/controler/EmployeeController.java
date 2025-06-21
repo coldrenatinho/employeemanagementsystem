@@ -8,6 +8,8 @@ import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/v1/employees")
 @AllArgsConstructor
@@ -28,10 +30,15 @@ public class EmployeeController {
 
     //@PathVariable é usado para extrair valores de variáveis de caminho na URL.
     @GetMapping("/{employeeId}")
-    public ResponseEntity<EmployeeDto> getEmployeeById(@PathVariable Long employeeId) {
+    public ResponseEntity<EmployeeDto> getEmployeeById(@PathVariable("employeeId") Long employeeId) {
         EmployeeDto employeeDto = employeeService.getEmployeeById(employeeId);
         return new ResponseEntity<>(employeeDto, HttpStatus.OK);
     }
 
-
+    // Build get All Employees REST API
+    @GetMapping("/getAllEmployees")
+    public ResponseEntity<List<EmployeeDto>> getAllEmployees() {
+        List<EmployeeDto> employees = employeeService.getAllEmployees();
+        return ResponseEntity.ok(employees);
+    }
 }

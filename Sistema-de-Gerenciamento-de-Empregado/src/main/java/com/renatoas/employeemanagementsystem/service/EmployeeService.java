@@ -2,6 +2,8 @@ package com.renatoas.employeemanagementsystem.service;
 
 import com.renatoas.employeemanagementsystem.dto.EmployeeDto;
 
+import java.util.List;
+
 /**
  * Interface da camada de serviço responsável por definir os métodos de negócio relacionados ao funcionário.
  * A camada de serviço faz a ponte entre os controladores (controllers) e os repositórios, garantindo que as regras de negócio sejam aplicadas corretamente.
@@ -13,4 +15,6 @@ public interface EmployeeService {
     EmployeeDto createEmployee(EmployeeDto employeeDto);
 
     EmployeeDto getEmployeeById(Long employeeId);
+
+    List<EmployeeDto> getAllEmployees();
 }

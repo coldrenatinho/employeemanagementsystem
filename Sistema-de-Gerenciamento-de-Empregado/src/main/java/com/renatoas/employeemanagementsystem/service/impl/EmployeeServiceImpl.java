@@ -16,6 +16,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.Collections;
+import java.util.List;
+import java.util.stream.Collectors;
 
 // Esta classe é anotada com @Service para que o Spring a reconheça como um bean de serviço.
 @Service
@@ -51,6 +53,17 @@ public class EmployeeServiceImpl implements EmployeeService {
         return EmployeeMapper.mapToEmployeeDto(employee);
 
     }
+
+    @Override
+    public List<EmployeeDto> getAllEmployees() {
+        // Busca todos os funcionários do repositório e converte para uma lista de EmployeeDto
+        // O método findAll() do repositório retorna uma lista de Employee, que é convertida para EmployeeDto usando o EmployeeMapper.
+        // O método retorna uma lista de EmployeeDto, que é uma representação dos funcionários.
+       List<Employee> employees = employeeRepository.findAll();
+        return employees.stream().map((employee) -> EmployeeMapper.mapToEmployeeDto(employee))
+                .collect(Collectors.toUnmodifiableList());
+    }
+
 
 
 
