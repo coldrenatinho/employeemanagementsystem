@@ -12,6 +12,7 @@ public class ResourceNotFoundException extends RuntimeException {
     // Construtor que recebe uma mensagem de erro personalizada e retorna a superclasse RuntimeException.
     public ResourceNotFoundException(String message) {
         super(message);
+        System.out.println(message);
     }
 
 }
