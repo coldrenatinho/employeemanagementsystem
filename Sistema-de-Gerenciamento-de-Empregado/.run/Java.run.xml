@@ -1,0 +1,11 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Java" type="Application" factoryName="Application" show_console_on_std_out="true">
+    <output_file path="F:\Estudo_Faculdade\JAVA\Projeto_Java\employeemanagementsystem\.log\console.log" is_save="true" />
+    <log_file alias="java.log" path="$PROJECT_DIR$/../.log" />
+    <option name="MAIN_CLASS_NAME" value="com.renatoas.employeemanagementsystem.SistemaDeGerenciamentoDeEmpregadoApplication" />
+    <module name="Sistema-de-Gerenciamento-de-Empregado" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
