@@ -44,7 +44,7 @@ public class EmployeeController {
 
     @PutMapping("{id}")                               //Define um endpoint
     public ResponseEntity<EmployeeDto> updateEmployee(@PathVariable("id") Long employeeId,
-                                                      //Cria um endpoint para atualizar um funcionário
+                                                      //Recebe um json no corpo da requisição para o Objeto EmployeeDto
                                                       @RequestBody EmployeeDto updatedEmployeeDto)
 
     {

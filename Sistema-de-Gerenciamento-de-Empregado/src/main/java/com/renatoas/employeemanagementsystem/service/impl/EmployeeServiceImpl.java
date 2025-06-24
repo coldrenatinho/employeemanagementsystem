@@ -90,7 +90,14 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     }
 
-
+    @Override
+    public void deleteEmployee(Long employeeId) {
+        EmployeeDto deleteEmployee = getEmployeeById(employeeId);
+        if (deleteEmployee == null) {
+            throw new ResourceNotFoundException("Funcionário não encontrado com id: " + employeeId);
+        }
+        employeeRepository.deleteById(employeeId);
+    }
 
 
     // Métodos de negócio seriam implementados aqui, por exemplo:
