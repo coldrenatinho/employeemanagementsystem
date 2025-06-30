@@ -9,10 +9,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
 @RestController
-@RequestMapping("/api/v1/employees")
 @AllArgsConstructor
+@CrossOrigin(origins = "http://localhost:3000") // Permite requisições de origens específicas
+@RequestMapping("/api/v1/employees")
 public class EmployeeController {
 
 

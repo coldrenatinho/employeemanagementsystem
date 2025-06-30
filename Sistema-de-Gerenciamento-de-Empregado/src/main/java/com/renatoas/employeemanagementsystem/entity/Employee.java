@@ -15,10 +15,11 @@ import lombok.Setter;
 // JPA: Anotações para mapear a classe como uma entidade do banco de dados
 @Entity
 // Define o nome da tabela no banco de dados
-@Table(name = "eployees")
+@Table(name = "Employee")
 public class Employee {
 
     // JPA: Define o ID da entidade, que será gerado automaticamente
+    //FIXME: Use @GeneratedValue para especificar a estratégia de geração do ID PARA UUID
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
