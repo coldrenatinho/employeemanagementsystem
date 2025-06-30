@@ -2,6 +2,7 @@ package com.renatoas.employeemanagementsystem.controler;
 
 import com.renatoas.employeemanagementsystem.dto.EmployeeDto;
 import com.renatoas.employeemanagementsystem.service.EmployeeService;
+import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
@@ -21,7 +22,7 @@ public class EmployeeController {
 
     @PostMapping
     // Define endpoints for employee management here
-    public ResponseEntity<EmployeeDto> createEmployee(@RequestBody EmployeeDto employeeDto) {
+    public ResponseEntity<EmployeeDto> createEmployee(@Valid @RequestBody EmployeeDto employeeDto) {
         EmployeeDto savedEmployee = employeeService.createEmployee(employeeDto);
         // Return the created employee with a 201 Created status
         //Verificar
