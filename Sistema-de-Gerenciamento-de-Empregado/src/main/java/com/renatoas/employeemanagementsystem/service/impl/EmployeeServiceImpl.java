@@ -82,12 +82,21 @@ public class EmployeeServiceImpl implements EmployeeService {
 
 
         // Salva o funcionário atualizado no repositório e retorna o EmployeeDto correspondente
-        // O método save() do repositório salva o objeto Employee atualizado no banco de dados.
-        // O método retorna um EmployeeDto, que é uma representação do funcionário atualizado.
+        // O metodo save() do repositório salva o objeto Employee atualizado no banco de dados.
+        // O metodo retorna um EmployeeDto, que é uma representação do funcionário atualizado.
         Employee updateEmployeeObj = employeeRepository.save(updateEmployee);
 
         return EmployeeMapper.mapToEmployeeDto(updateEmployeeObj);
 
+    }
+
+    @Override
+    public void deleteEmployee(Long employeeId) {
+        EmployeeDto deleteEmployee = getEmployeeById(employeeId);
+        if (deleteEmployee == null) {
+            throw new ResourceNotFoundException("Funcionário não encontrado com id: " + employeeId);
+        }
+        employeeRepository.deleteById(employeeId);
     }
 
 

@@ -1,0 +1,70 @@
+2025-06-21T19:57:19.113-04:00  INFO 544 --- [Sistema-de-Gerenciamento-de-Empregado] [main] emaDeGerenciamentoDeEmpregadoApplication : Starting SistemaDeGerenciamentoDeEmpregadoApplication using Java 24.0.1 with PID 544 (F:\Estudo_Faculdade\JAVA\Projeto_Java\employeemanagementsystem\Sistema-de-Gerenciamento-de-Empregado\target\classes started by Administrator_Kayne in F:\Estudo_Faculdade\JAVA\Projeto_Java\employeemanagementsystem\Sistema-de-Gerenciamento-de-Empregado)
+2025-06-21T19:57:19.120-04:00  INFO 544 --- [Sistema-de-Gerenciamento-de-Empregado] [main] emaDeGerenciamentoDeEmpregadoApplication : No active profile set, falling back to 1 default profile: "default"
+2025-06-21T19:57:21.020-04:00  INFO 544 --- [Sistema-de-Gerenciamento-de-Empregado] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-21T19:57:21.239-04:00  INFO 544 --- [Sistema-de-Gerenciamento-de-Empregado] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 173 ms. Found 1 JPA repository interface.
+2025-06-21T19:57:22.543-04:00  INFO 544 --- [Sistema-de-Gerenciamento-de-Empregado] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-06-21T19:57:22.579-04:00  INFO 544 --- [Sistema-de-Gerenciamento-de-Empregado] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-21T19:57:22.580-04:00  INFO 544 --- [Sistema-de-Gerenciamento-de-Empregado] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-21T19:57:22.712-04:00  INFO 544 --- [Sistema-de-Gerenciamento-de-Empregado] [main] o.a.c.c.C.[Tomcat].[localhost].[/api]    : Initializing Spring embedded WebApplicationContext
+2025-06-21T19:57:22.713-04:00  INFO 544 --- [Sistema-de-Gerenciamento-de-Empregado] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3431 ms
+2025-06-21T19:57:23.222-04:00  INFO 544 --- [Sistema-de-Gerenciamento-de-Empregado] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-21T19:57:23.378-04:00  INFO 544 --- [Sistema-de-Gerenciamento-de-Empregado] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.15.Final
+2025-06-21T19:57:23.497-04:00  INFO 544 --- [Sistema-de-Gerenciamento-de-Empregado] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-21T19:57:24.230-04:00  INFO 544 --- [Sistema-de-Gerenciamento-de-Empregado] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-21T19:57:24.299-04:00  INFO 544 --- [Sistema-de-Gerenciamento-de-Empregado] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-21T19:57:25.122-04:00  INFO 544 --- [Sistema-de-Gerenciamento-de-Empregado] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@42cc5460
+2025-06-21T19:57:25.129-04:00  INFO 544 --- [Sistema-de-Gerenciamento-de-Empregado] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-21T19:57:25.283-04:00  WARN 544 --- [Sistema-de-Gerenciamento-de-Empregado] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-06-21T19:57:25.353-04:00  INFO 544 --- [Sistema-de-Gerenciamento-de-Empregado] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 9.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-06-21T19:57:27.466-04:00  INFO 544 --- [Sistema-de-Gerenciamento-de-Empregado] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-21T19:57:27.600-04:00  INFO 544 --- [Sistema-de-Gerenciamento-de-Empregado] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-21T19:57:28.320-04:00  WARN 544 --- [Sistema-de-Gerenciamento-de-Empregado] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-06-21T19:57:29.126-04:00  INFO 544 --- [Sistema-de-Gerenciamento-de-Empregado] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/api'
+2025-06-21T19:57:29.144-04:00  INFO 544 --- [Sistema-de-Gerenciamento-de-Empregado] [main] emaDeGerenciamentoDeEmpregadoApplication : Started SistemaDeGerenciamentoDeEmpregadoApplication in 11.367 seconds (process running for 12.294)
+2025-06-21T19:57:38.952-04:00  INFO 544 --- [Sistema-de-Gerenciamento-de-Empregado] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-21T19:57:38.963-04:00  INFO 544 --- [Sistema-de-Gerenciamento-de-Empregado] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-06-21T19:57:38.968-04:00  INFO 544 --- [Sistema-de-Gerenciamento-de-Empregado] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-21T19:57:38.973-04:00  INFO 544 --- [Sistema-de-Gerenciamento-de-Empregado] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-21T19:57:38.988-04:00  INFO 544 --- [Sistema-de-Gerenciamento-de-Empregado] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-06-21T19:57:44.752-04:00  INFO 12932 --- [Sistema-de-Gerenciamento-de-Empregado] [main] emaDeGerenciamentoDeEmpregadoApplication : Starting SistemaDeGerenciamentoDeEmpregadoApplication using Java 24.0.1 with PID 12932 (F:\Estudo_Faculdade\JAVA\Projeto_Java\employeemanagementsystem\Sistema-de-Gerenciamento-de-Empregado\target\classes started by Administrator_Kayne in F:\Estudo_Faculdade\JAVA\Projeto_Java\employeemanagementsystem\Sistema-de-Gerenciamento-de-Empregado)
+2025-06-21T19:57:44.758-04:00  INFO 12932 --- [Sistema-de-Gerenciamento-de-Empregado] [main] emaDeGerenciamentoDeEmpregadoApplication : No active profile set, falling back to 1 default profile: "default"
+2025-06-21T19:57:46.603-04:00  INFO 12932 --- [Sistema-de-Gerenciamento-de-Empregado] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-21T19:57:46.806-04:00  INFO 12932 --- [Sistema-de-Gerenciamento-de-Empregado] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 173 ms. Found 1 JPA repository interface.
+2025-06-21T19:57:48.096-04:00  INFO 12932 --- [Sistema-de-Gerenciamento-de-Empregado] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-06-21T19:57:48.133-04:00  INFO 12932 --- [Sistema-de-Gerenciamento-de-Empregado] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-21T19:57:48.133-04:00  INFO 12932 --- [Sistema-de-Gerenciamento-de-Empregado] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-21T19:57:48.278-04:00  INFO 12932 --- [Sistema-de-Gerenciamento-de-Empregado] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-21T19:57:48.279-04:00  INFO 12932 --- [Sistema-de-Gerenciamento-de-Empregado] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3383 ms
+2025-06-21T19:57:48.823-04:00  INFO 12932 --- [Sistema-de-Gerenciamento-de-Empregado] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-21T19:57:48.948-04:00  INFO 12932 --- [Sistema-de-Gerenciamento-de-Empregado] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.15.Final
+2025-06-21T19:57:49.048-04:00  INFO 12932 --- [Sistema-de-Gerenciamento-de-Empregado] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-21T19:57:49.812-04:00  INFO 12932 --- [Sistema-de-Gerenciamento-de-Empregado] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-21T19:57:49.887-04:00  INFO 12932 --- [Sistema-de-Gerenciamento-de-Empregado] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-21T19:57:50.821-04:00  INFO 12932 --- [Sistema-de-Gerenciamento-de-Empregado] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4492b393
+2025-06-21T19:57:50.826-04:00  INFO 12932 --- [Sistema-de-Gerenciamento-de-Empregado] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-21T19:57:50.966-04:00  WARN 12932 --- [Sistema-de-Gerenciamento-de-Empregado] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-06-21T19:57:51.026-04:00  INFO 12932 --- [Sistema-de-Gerenciamento-de-Empregado] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 9.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-06-21T19:57:52.964-04:00  INFO 12932 --- [Sistema-de-Gerenciamento-de-Empregado] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-21T19:57:53.086-04:00  INFO 12932 --- [Sistema-de-Gerenciamento-de-Empregado] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-21T19:57:53.798-04:00  WARN 12932 --- [Sistema-de-Gerenciamento-de-Empregado] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-06-21T19:57:54.650-04:00  INFO 12932 --- [Sistema-de-Gerenciamento-de-Empregado] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-06-21T19:57:54.666-04:00  INFO 12932 --- [Sistema-de-Gerenciamento-de-Empregado] [main] emaDeGerenciamentoDeEmpregadoApplication : Started SistemaDeGerenciamentoDeEmpregadoApplication in 11.378 seconds (process running for 12.293)
+2025-06-21T21:23:09.623-04:00  INFO 12932 --- [Sistema-de-Gerenciamento-de-Empregado] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-21T21:23:09.635-04:00  INFO 12932 --- [Sistema-de-Gerenciamento-de-Empregado] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-06-21T21:23:09.642-04:00  INFO 12932 --- [Sistema-de-Gerenciamento-de-Empregado] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-21T21:23:09.647-04:00  INFO 12932 --- [Sistema-de-Gerenciamento-de-Empregado] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-21T21:23:09.656-04:00  INFO 12932 --- [Sistema-de-Gerenciamento-de-Empregado] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

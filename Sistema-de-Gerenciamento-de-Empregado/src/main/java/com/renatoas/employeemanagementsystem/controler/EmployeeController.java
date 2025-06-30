@@ -2,6 +2,7 @@ package com.renatoas.employeemanagementsystem.controler;
 
 import com.renatoas.employeemanagementsystem.dto.EmployeeDto;
 import com.renatoas.employeemanagementsystem.service.EmployeeService;
+import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
@@ -9,10 +10,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
 @RestController
-@RequestMapping("/api/v1/employees")
 @AllArgsConstructor
+@CrossOrigin(origins = "http://localhost:3000") // Permite requisições de origens específicas
+@RequestMapping("/api/v1/employees")
 public class EmployeeController {
 
 
@@ -21,7 +22,7 @@ public class EmployeeController {
 
     @PostMapping
     // Define endpoints for employee management here
-    public ResponseEntity<EmployeeDto> createEmployee(@RequestBody EmployeeDto employeeDto) {
+    public ResponseEntity<EmployeeDto> createEmployee(@Valid @RequestBody EmployeeDto employeeDto) {
         EmployeeDto savedEmployee = employeeService.createEmployee(employeeDto);
         // Return the created employee with a 201 Created status
         //Verificar
@@ -44,7 +45,7 @@ public class EmployeeController {
 
     @PutMapping("{id}")                               //Define um endpoint
     public ResponseEntity<EmployeeDto> updateEmployee(@PathVariable("id") Long employeeId,
-                                                      //Cria um endpoint para atualizar um funcionário
+                                                      //Recebe um json no corpo da requisição para o Objeto EmployeeDto
                                                       @RequestBody EmployeeDto updatedEmployeeDto)
 
     {
@@ -52,5 +53,13 @@ public class EmployeeController {
         return  ResponseEntity.ok(updatedEmployee);
     }
 
+
+
+    //Build Delete Employee REST API
+    @DeleteMapping("{id}")
+    public ResponseEntity<String> deleteEmployee(@PathVariable("id") Long employeeId ) {
+        employeeService.deleteEmployee(employeeId);
+        return ResponseEntity.ok("Employee deleted successfully");
+    }
 
 }
